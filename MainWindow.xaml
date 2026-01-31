@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:stor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cars stor" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="195*"/>
+        </Grid.RowDefinitions>
+        <!-- шапка -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16*"/>
+                <ColumnDefinition Width="112*"/>
+                <ColumnDefinition Width="16*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="Logo" Grid.Column="0" Content="логотип" />
+
+            <Image x:Name="Ico" Grid.Column="2"></Image>
+        </Grid>
+
+        <!-- тело -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="32*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*"/>
+            </Grid.RowDefinitions>
+
+            <!-- фильтр -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="37*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Content="Filter"></Label>
+                
+                <!-- фильтры доделать-->
+            </Grid>
+
+            <!-- товары -->
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="37*"/>
+                </Grid.RowDefinitions>
+
+                <Image x:Name="Serch_ico" Grid.Column="0" Grid.Row="0"></Image>
+                <TextBox x:Name="Serch_input" Grid.Column="1" Grid.Row="0"></TextBox>
+
+                <DataGrid x:Name="Spase_cars" Grid.Row="1" Grid.ColumnSpan="2"></DataGrid>
+            </Grid>
+
+
+        </Grid>
+
     </Grid>
 </Window>
